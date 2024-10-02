@@ -13,8 +13,12 @@ public class Calc {
         System.out.println("Please enter operator: ");
         String op = sc.next();
 
+
         switch(op) {
             case "add": add(num1, num2);break;
+
+            case "subtract": subtract(num1, num2);break;
+
             default: System.out.println("Invalid operator");break;
         }
 
@@ -22,6 +26,10 @@ public class Calc {
 
     public static void add(int a,int b) {
         int sum = a+b;
+        System.out.println("The sum is: " + sum);
+    }
+    public static void subtract(int a,int b) {
+        int sum = a-b;
         System.out.println("The sum is: " + sum);
     }
 }
