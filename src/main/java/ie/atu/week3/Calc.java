@@ -19,6 +19,10 @@ public class Calc {
 
             case "subtract": subtract(num1, num2);break;
 
+            case "multiply": multiply(num1, num2);break;
+
+
+
             default: System.out.println("Invalid operator");break;
         }
 
@@ -30,6 +34,11 @@ public class Calc {
     }
     public static void subtract(int a,int b) {
         int sum = a-b;
+        System.out.println("The sum is: " + sum);
+    }
+
+    public static void multiply(int a,int b) {
+        int sum = a*b;
         System.out.println("The sum is: " + sum);
     }
 }
