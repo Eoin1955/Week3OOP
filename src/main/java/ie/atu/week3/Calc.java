@@ -7,21 +7,21 @@ public class Calc {
         //methods
         System.out.println("Please enter number 1: ");
         Scanner sc = new Scanner(System.in);
-        int num1 = sc.nextInt();
+        float num1 = sc.nextFloat();
         System.out.println("Please enter number 2: ");
-        int num2 = sc.nextInt();
+        float num2 = sc.nextFloat();
         System.out.println("Please enter operator: ");
         String op = sc.next();
 
 
         switch(op) {
-            case "add": add(num1, num2);break;
+            case "add": add((int) num1, (int)num2);break;
 
-            case "subtract": subtract(num1, num2);break;
+            case "subtract": subtract((int) num1, (int)num2);break;
 
-            case "multiply": multiply(num1, num2);break;
+            case "multiply": multiply((int) num1, (int)num2);break;
 
-            case 
+            case "divide": divide(num1, num2);break;
 
             default: System.out.println("Invalid operator");break;
         }
@@ -40,6 +40,17 @@ public class Calc {
     public static void multiply(int a,int b) {
         int sum = a*b;
         System.out.println("The sum is: " + sum);
+    }
 
+    public static void divide(float a,float b) {
+
+        if(b==0){
+            System.out.println("Division by zero");
+            return;
+        }
+        else {
+            float sum = a/b;
+            System.out.println("The sum is: " + sum);
+        }
     }
 }
