@@ -14,7 +14,7 @@ public class Calc {
         String op = sc.next();
 
         switch(op) {
-            case "add": add(a, b);break;
+            case "add": add(num1, num2);break;
             default: System.out.println("Invalid operator");break;
         }
 
