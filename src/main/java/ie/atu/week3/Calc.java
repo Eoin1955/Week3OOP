@@ -21,7 +21,7 @@ public class Calc {
 
             case "multiply": multiply(num1, num2);break;
 
-            case 
+            case "divide": divide(num1, num2);break;
 
             default: System.out.println("Invalid operator");break;
         }
@@ -40,6 +40,17 @@ public class Calc {
     public static void multiply(int a,int b) {
         int sum = a*b;
         System.out.println("The sum is: " + sum);
+    }
 
+    public static void divide(int a,int b) {
+
+        if(b==0){
+            System.out.println("Division by zero");
+            return;
+        }
+        else {
+            int sum = a/b;
+            System.out.println("The sum is: " + sum);
+        }
     }
 }
